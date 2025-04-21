@@ -36,8 +36,8 @@ loss , acc = model.evaluate(X_test,y_test)
 print("Test Accuracy: ", acc * 100)
 
 # Make predictions
-i = 0
-sample = X_test[i].reshape(1,28,28,1)
+i = 2
+sample = X_test[i].reshape(-1,28,28,1)
 pred = model.predict(sample)
 predicted_class = np.argmax(pred)
 
